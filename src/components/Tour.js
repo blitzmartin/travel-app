@@ -7,6 +7,7 @@ export default function Tour({ id, name, info, image, price, removeTour }) {
   const handleClick = () => {
     setReadMore(!readMore);
   }
+
   return (
     <Card className="card-style">
       <Card.Img className="card-img" variant="top" src={image} alt={name} />
