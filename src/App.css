@@ -1,3 +1,18 @@
+:root {
+  --light-col: #fff;
+  --dark-col: #131313;
+  --primary-col: #132fce;
+  --accent-col: #c22929;
+}
+
 .App {
   text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card-style {
+  width: 600px;
+  text-align: left;
+  margin: 3rem auto;
 }
