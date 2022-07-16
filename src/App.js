@@ -4,6 +4,7 @@ import Loading from "./components/Loading.js";
 import { useEffect, useState } from "react";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button'
 
 const url = "https://course-api.com/react-tours-project";
 
@@ -43,7 +44,12 @@ function App() {
         </Container>
       </Navbar>
       {loading && <Loading />}
-      <Tours tours={tours} removeTour={removeTour}/>
+      {tours.length === 0 
+      ? <div>
+        <h1>No Tours Left</h1>
+        <Button onClick={fetchTours}>Refresh</Button>
+        </div> 
+      : <Tours tours={tours} removeTour={removeTour}/>}
     </div>
   );
 }
