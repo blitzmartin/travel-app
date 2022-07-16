@@ -15,8 +15,8 @@ export default function Tour({ id, name, info, image, price }) {
         <Card.Subtitle className="mb-2 text-muted">${price}</Card.Subtitle>
         <Card.Text>{readMore ? info : `${info.substring(0, 230)}...`}<Button variant="link" size="sm" onClick={handleClick} className="link-btn">
           {readMore
-          ? <span>Read less</span>
-          : <span>Read more</span>
+          ? "Show less"
+          : "Read more"
           }
           </Button></Card.Text>
         <Button variant="danger">Not Interested</Button>
