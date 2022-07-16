@@ -5,7 +5,7 @@ import Container from "react-bootstrap/esm/Container.js";
 export default function Tours({ tours }) {
   return (
     <Container>
-      <h1>Tour</h1>
+      <h1>Our tours</h1>
       {tours.map((tour) => {
         return <Tour key={tour.id} {...tour} />;
       })}
