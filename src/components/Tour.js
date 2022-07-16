@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 
-export default function Tour({ id, name, info, image, price }) {
+export default function Tour({ id, name, info, image, price, removeTour }) {
   const [readMore, setReadMore] = useState(false);
   const handleClick = () => {
     setReadMore(!readMore);
@@ -19,7 +19,7 @@ export default function Tour({ id, name, info, image, price }) {
           : "Read more"
           }
           </Button></Card.Text>
-        <Button variant="danger">Not Interested</Button>
+        <Button variant="danger" onClick={() => removeTour(id)}>Not Interested</Button>
       </Card.Body>
     </Card>
   );
